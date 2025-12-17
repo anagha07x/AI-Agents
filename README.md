@@ -1,7 +1,9 @@
 **🪙 Crypto Analysis Agent (LangGraph)**
+
 An interactive LLM-powered crypto market analysis agent built using LangGraph and LangChain, capable of calling external tools, retaining conversational memory across turns, and producing structured, data-backed insights.
 
 _🚀 Features_
+
 🔧 Tool-augmented reasoning
 Lists cryptocurrencies
 Fetches real-time market data
@@ -16,6 +18,7 @@ Supports follow-up questions like “What about ETH?”
 Prevents context overflow by controlling memory growth
 
 _🧩 Architecture Overview_
+
 The agent is implemented as a LangGraph ReAct-style graph with the following nodes:
 Assistant Node
 Uses an LLM bound with tools via llm.bind_tools()
@@ -27,6 +30,7 @@ Routes control between assistant and tools based on detected tool calls
 Memory is managed using a checkpoint-based system (MemorySaver) to enable multi-turn conversations.
 
 _🧠 Memory & Context Management_
+
 The agent supports context-aware conversations using a persistent thread_id.
 To prevent token overflow during long sessions or repeated tests:
 Each interactive session uses a fresh thread ID
